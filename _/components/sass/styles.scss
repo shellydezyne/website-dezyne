@@ -1,4 +1,4 @@
-@import "compass";
+/*@import "compass";
 @import "compass/reset";
 @import "susy";
 
@@ -8,3 +8,11 @@
 @import "base";
 @import "layout";
 @import "modules";
+*/
+$mycolor:#eeccbb;
+
+body
+{
+    background: $mycolor;
+    
+}
