@@ -1,7 +1,7 @@
    {
-  "name": "website-vedkrishna",
+  "name": "website-dezyne",
   "version": "1.0.0",
-  "description": "website code for vedkrishna.com",
+  "description": "website code for dezyne.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
