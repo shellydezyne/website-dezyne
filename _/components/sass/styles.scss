@@ -1,18 +1,136 @@
-/*@import "compass";
-@import "compass/reset";
+
+/* ordering of importing files is imp...should follow hiearchy*/
+@import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+@import "compass";
+@import "compass/reset";    
 @import "susy";
 
 
 @import "variables";
-@import "mixins";
+//@import "mixins";
 @import "base";
-@import "layout";
-@import "modules";
-*/
-$mycolor:#eeccbb;
+//@import "layout";
+//@import "modules";
 
-body
-{
-    background: $mycolor;
-    
+$susy: (
+  flow: ltr, // ltr | rtl
+  output: float, // float | isolate
+  math: fluid, // fluid | static (requires column-width)
+  column-width: 40px, // false | value
+  container:auto, // length or % | auto
+  container-position: center, // left | center | right | <length> [*2] (grid padding)
+  last-flow: to,
+  columns: 12,
+  gutters: 1,
+  gutter-position: after, // before | after | split | inside | inside-static (requires column-width)
+  global-box-sizing: content-box, // content-box | border-box (affects inside/inside-static)
+);
+
+$small:30em;
+$medium:47em;
+$large:95em;
+
+header {
+    .info{
+       
+                //margin-bottom:1%;
+                width:100%;
+                position:relative;
+                display:block;
+                width:100%;
+                height:600px;
+ //               @include background(linear-gradient(bottom left,rgba($darkerblue,.6),rgba($darkerblue,0)),image-url('background.png'));
+ @include background(image-url('background.png'));
+                 background-repeat: no-repeat;
+                 background-position: center center;
+                 -webkit-background-size: cover;
+                 -moz-background-size: cover;
+                 -o-background-size:cover;
+                 background-size: cover;
+                 margin:0 auto;
+                 //   height: 200;
+          
+           
+    }
 }
+/*
+.hero {
+  height: 100px;
+  margin-bottom: 10px;
+  h3, h2 {
+    margin: 10px;
+  }
+  .one {
+    background: #FF739C;
+    height: 100%;
+  }
+  .two {
+    height: 100%;
+    div {
+      height: 100%;
+      background: #CCC136;
+    }
+  }
+}
+
+.content {
+  h3 {
+    margin: 10px;
+  }
+  div {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  div:nth-child(3n) {
+     background: #2F94B2;
+  }
+  div:nth-child(3n+1) {
+     background: #FF7311;
+  }
+  div:nth-child(3n+2) {
+     background: #5DD9FF;
+  }
+}
+*/
+////  GRID
+
+/*.page {
+  @include container;
+}*/
+
+header {
+  @include full;
+}
+/*
+.hero {
+  clear: both;
+  .one {
+    @include span(first 4);
+  }
+  .two {
+    @include span(last 8  nest);
+    div:nth-child(4n+1) {
+      clear: both;
+      @include span(2 at 1 of 8);
+    }
+    div:nth-child(4n+2) {
+      @include span(2 at 3 of 8);
+    }
+    div:nth-child(4n+3) {
+      @include span(2 at 5 of 8);
+    }
+    div:nth-child(4n) {
+      @include span(last 2 of 8);
+    }
+    div:nth-child(4) {
+      @include span(last 2 of 8);
+    }
+  }
+}
+
+.content {
+  div {
+    @include gallery(4);
+  }
+}*/
