@@ -1,4 +1,0 @@
-function other()
-{
-    return "other";
-}

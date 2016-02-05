@@ -1,1 +1,376 @@
-@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather");@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}body{font-family:Merriweather,serif;font-size:1.2rem;line-height:160%;color:#EAE3CB}header{height:600px;background:url('../../images/background.png?1454492870');background-repeat:no-repeat;background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;margin:0 auto;width:100%}header .headerpart1{height:200px}header .headerpart1 .header1_3{display:none}header .headerpart1 .menuIcon{display:inline-block}@media (min-width: 992px){header .headerpart1 .header1_3{display:inline-block}}@media (min-width: 500px){header .headerpart1 .menuIcon{display:none}}header .headerpart1 .header1_1{margin-top:.5em;display:inline-block;width:15%;vertical-align:top}header .headerpart1 .header1_2{display:inline-block;width:50%;vertical-align:top;margin-top:.5em}@media (min-width: 30em){header .headerpart1 .header1_2 ul{margin:0;padding:0;border:0;overflow:hidden;*zoom:1}header .headerpart1 .header1_2 ul li{list-style-image:none;list-style-type:none;margin-left:0;white-space:nowrap;float:left;padding-left:4px;padding-right:4px}header .headerpart1 .header1_2 ul li:first-child{padding-left:0}header .headerpart1 .header1_2 ul li:last-child{padding-right:0}header .headerpart1 .header1_2 ul li.last{padding-right:0}}header .headerpart1 .header1_2 ul li i{color:#f7b71a;padding-right:.5em}header .headerpart1 .header1_2 ul li a{display:block;text-decoration:none;padding:5px 10px;color:#FCF4DC}header .headerpart1 .header1_2 ul li a:hover{background:#BD3613}header .headerpart1 .header1_2 ul li a:hover a{color:#f8c64c}header .headerpart1 .header1_3{padding-left:5%;vertical-align:top}header .headerpart1 .header1_3 li{display:inline-block;width:40px}header .headerpart1 .header1_3 a{display:block;overflow:hidden;height:30px;position:absolute}header .headerpart1 .header1_3 a:hover{top:30px}header .headerpart2{height:400px}header{clear:both;width:100%;float:left;margin-left:0;margin-right:0}
+/* ordering of importing files is imp...should follow hiearchy*/
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")*/
+/* line 4, ../components/sass/_base.scss */
+body {
+  font-family: Merriweather, serif;
+  font-size: 1.2rem;
+  line-height: 160%;
+  color: #EAE3CB;
+}
+
+/* line 33, ../components/sass/styles.scss */
+header {
+  height: 600px;
+  background: url('../../images/background.png?1454492870');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+}
+/* line 47, ../components/sass/styles.scss */
+header .headerpart1 {
+  height: 200px;
+  /*@include breakpoint($small)
+  {
+      .menuIcon
+      { 
+          display: none;
+      }
+      
+      
+  }
+  */
+  /*@include susy-breakpoint($medium, $susy)
+   {
+      .header1_3 { display: inline-block; }    // header1_3 becomes visible at breakpoint
+   } 
+*/
+        /*
+                @include breakpoint($small)  {
+                    ul{  @include horizontal-list;     }
+                   .menu{
+            max-height: 0;
+            overflow: hidden;
+            float: none;
+            
+             @include transition(max-height 0.5s);
+            &.menuOpen {
+              max-height: 1000px;
+              @include transition(max-height 0.5s);
+            
+            }} 
+              .menuIcon{display:inline-none;}    
+                  }
+            
+         
+         
+         
+         
+}  */
+  /*  menu{
+         max-height: 0;
+         overflow: hidden;
+         float: none;
+          @include transition(max-height 0.5s);
+         &.menuOpen {
+           max-height: 1000px;
+           @include transition(max-height 0.5s);
+         
+         }}*/
+}
+/* line 50, ../components/sass/styles.scss */
+header .headerpart1 .header1_3 {
+  display: none;
+}
+/* line 51, ../components/sass/styles.scss */
+header .headerpart1 .menuIcon {
+  display: inline-block;
+}
+@media (min-width: 992px) {
+  /* line 54, ../components/sass/styles.scss */
+  header .headerpart1 .header1_3 {
+    display: inline-block;
+  }
+}
+/* line 71, ../components/sass/styles.scss */
+header .headerpart1 .header1_1 {
+  margin-top: .5em;
+  display: inline-block;
+  width: 15%;
+  vertical-align: top;
+}
+/* line 78, ../components/sass/styles.scss */
+header .headerpart1 .header1_2 {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-top: .5em;
+}
+/* line 85, ../components/sass/styles.scss */
+header .headerpart1 .header1_2 .menu ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 62, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+header .headerpart1 .header1_2 .menu ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 49, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+header .headerpart1 .header1_2 .menu ul li:first-child {
+  padding-left: 0;
+}
+/* line 50, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+header .headerpart1 .header1_2 .menu ul li:last-child {
+  padding-right: 0;
+}
+/* line 52, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+header .headerpart1 .header1_2 .menu ul li.last {
+  padding-right: 0;
+}
+/* line 87, ../components/sass/styles.scss */
+header .headerpart1 .header1_2 .menu li i {
+  color: #f7b71a;
+  padding-right: .5em;
+}
+/* line 91, ../components/sass/styles.scss */
+header .headerpart1 .header1_2 .menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #FCF4DC;
+}
+/* line 96, ../components/sass/styles.scss */
+header .headerpart1 .header1_2 .menu li a:hover {
+  background: #BD3613;
+}
+/* line 98, ../components/sass/styles.scss */
+header .headerpart1 .header1_2 .menu li a:hover a {
+  color: #f8c64c;
+}
+/* line 104, ../components/sass/styles.scss */
+header .headerpart1 .header1_2 .menuIcon {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 108, ../components/sass/styles.scss */
+  header .headerpart1 .header1_2 .menu {
+    max-height: 0;
+    overflow: hidden;
+    float: none;
+    -moz-transition: max-height 0.5s;
+    -o-transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+  /* line 114, ../components/sass/styles.scss */
+  header .headerpart1 .header1_2 .menu.menuOpen {
+    max-height: 1000px;
+    -moz-transition: max-height 0.5s;
+    -o-transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+  /* line 119, ../components/sass/styles.scss */
+  header .headerpart1 .header1_2 .menuIcon {
+    display: inline-block;
+  }
+}
+/* line 155, ../components/sass/styles.scss */
+header .headerpart1 .header1_3 {
+  padding-left: 5%;
+  vertical-align: top;
+}
+/* line 163, ../components/sass/styles.scss */
+header .headerpart1 .header1_3 li {
+  display: inline-block;
+  width: 40px;
+}
+/* line 167, ../components/sass/styles.scss */
+header .headerpart1 .header1_3 a {
+  display: block;
+  overflow: hidden;
+  height: 30px;
+  position: absolute;
+}
+/* line 173, ../components/sass/styles.scss */
+header .headerpart1 .header1_3 a:hover {
+  top: 30px;
+}
+/* line 179, ../components/sass/styles.scss */
+header .headerpart2 {
+  height: 400px;
+}
+
+       /*   .headerpart1{
+                height:200px;
+                display:inline-block;
+                width:50%;
+                vertical-align: top;
+               //  float:left;
+                    .info{
+                        //margin-bottom:1%;
+                        //width:100%;
+                       // position:relative;
+                        //display:block;
+                      
+         }
+    .headerpart2{
+        height:400px;
+        
+    }
+}*/
+/*
+.hero {
+  height: 100px;
+  margin-bottom: 10px;
+  h3, h2 {
+    margin: 10px;
+  }
+  .one {
+    background: #FF739C;
+    height: 100%;
+  }
+  .two {
+    height: 100%;
+    div {
+      height: 100%;
+      background: #CCC136;
+    }
+  }
+}
+
+.content {
+  h3 {
+    margin: 10px;
+  }
+  div {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  div:nth-child(3n) {
+     background: #2F94B2;
+  }
+  div:nth-child(3n+1) {
+     background: #FF7311;
+  }
+  div:nth-child(3n+2) {
+     background: #5DD9FF;
+  }
+}
+*/
+/*.page {
+  @include container;
+}*/
+/* line 248, ../components/sass/styles.scss */
+header {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*
+.hero {
+  clear: both;
+  .one {
+    @include span(first 4);
+  }
+  .two {
+    @include span(last 8  nest);
+    div:nth-child(4n+1) {
+      clear: both;
+      @include span(2 at 1 of 8);
+    }
+    div:nth-child(4n+2) {
+      @include span(2 at 3 of 8);
+    }
+    div:nth-child(4n+3) {
+      @include span(2 at 5 of 8);
+    }
+    div:nth-child(4n) {
+      @include span(last 2 of 8);
+    }
+    div:nth-child(4) {
+      @include span(last 2 of 8);
+    }
+  }
+}
+
+.content {
+  div {
+    @include gallery(4);
+  }
+}*/

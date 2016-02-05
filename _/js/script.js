@@ -1,1 +1,1 @@
-function other(){return"other"}function test(){return"Hello"}
+$(function(){$("#link1").click(function(a){$(".menu").toggleClass("menuOpen"),a.preventDefault()})});

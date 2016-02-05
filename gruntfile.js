@@ -31,6 +31,6 @@
                 files: ['*.html']//to change all js files automatically
             }
         }// watch
-    }) // initConfig
+    }); // initConfig
     grunt.registerTask('default', 'watch'); // auto watch
-} // exports 
+}; // exports 

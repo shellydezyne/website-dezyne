@@ -31,6 +31,7 @@ $medium:47em;
 $large:95em;
 
 header {
+    
         height:600px;
               @include background(image-url('background.png'));
         // @include background(linear-gradient(bottom left,rgba($darkerblue,.6),rgba($darkerblue,0)),image-url('background.png'));
@@ -52,10 +53,16 @@ header {
                   {
                       .header1_3 { display: inline-block;} 
                   }
-                  @include breakpoint(500px)
+                  /*@include breakpoint($small)
                   {
-                      .menuIcon { display: none;} 
+                      .menuIcon
+                      { 
+                          display: none;
+                      }
+                      
+                      
                   }
+                  */
                   /*@include susy-breakpoint($medium, $susy)
                    {
                       .header1_3 { display: inline-block; }    // header1_3 becomes visible at breakpoint
@@ -73,14 +80,11 @@ header {
                             width:50%;
                             vertical-align: top;
                             margin-top: .5em;
-                                ul{
-                                    @include susy-breakpoint($small, $susy, '.no-mq') 
-                                   {
-                                       //background:lighten($red,15);
-                                       @include horizontal-list;
-                                   }
-                                   li{
-                                        i{
+                            //initial position of menu nd menuicon starts
+                            .menu
+                            {     ul{  @include horizontal-list;     }
+                                    li{
+                                       i{
                                             color:lighten($yellow,20);
                                             padding-right:.5em;
                                          }
@@ -94,12 +98,60 @@ header {
                                                  a{
                                                      color:lighten($yellow,30);
                                                  }
-                                             }
+                                              }
                                          }
+                            }}
+                            .menuIcon{display: none;}
+                            //initial position of menu nd menuicon ends
+                            @include breakpoint(max-width 767px)
+                            {
+                                .menu{
+                                  max-height: 0;
+                                overflow: hidden;
+                                float: none;
+                                
+                                 @include transition(max-height 0.5s);
+                                &.menuOpen {
+                                  max-height: 1000px;
+                                  @include transition(max-height 0.5s);
+                                
+                                }}  
+                               .menuIcon{display:inline-block;} 
+                            }
+                                                 
+                                
+                            }
+                            /*
+                                    @include breakpoint($small)  {
+                                        ul{  @include horizontal-list;     }
+                                       .menu{
+                                max-height: 0;
+                                overflow: hidden;
+                                float: none;
+                                
+                                 @include transition(max-height 0.5s);
+                                &.menuOpen {
+                                  max-height: 1000px;
+                                  @include transition(max-height 0.5s);
+                                
+                                }} 
+                                  .menuIcon{display:inline-none;}    
                                       }
-                                }
-                             }
-                        
+                                
+                             
+                             
+                             
+                             
+                    }  *//*  menu{
+                                max-height: 0;
+                                overflow: hidden;
+                                float: none;
+                                 @include transition(max-height 0.5s);
+                                &.menuOpen {
+                                  max-height: 1000px;
+                                  @include transition(max-height 0.5s);
+                                
+                                }}*/
                     .header1_3{
                         
                             //display:inline-block;
